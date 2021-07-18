@@ -1,0 +1,18 @@
+{% extends '_base.html' %}
+
+{% block title %}
+URL Alias List
+{% endblock title %}
+
+{% block content %}
+<ul>
+    {% for url in URLS %}
+        <li> url original: <a href={{url.original}}>{{url.original}}</a></li> 
+        <li> url alias: <a href={{url.alias}}>{{ url.alias }} </a></li> 
+        </br>
+    {% empty %}
+        <li> No Links yet </li>
+    {% endfor %}
+</ul>
+
+{% endblock content %}

@@ -1,0 +1,16 @@
+{% extends '_base.html' %}
+
+{% block title %}
+    Alias list
+{% endblock title %}
+
+{% block content %}
+<ul>
+    {% for url in URLS %}
+        <li><a href="{{url.alias}}">{{url.alias}}</a></li>
+        </br>
+    {% empty %}
+        <li> No Alias Yet </li>
+    {% endfor %}
+</ul>
+{% endblock content %}

@@ -1,0 +1,36 @@
+{% extends '_base.html' %}
+
+{% block title %}
+    Create URL Link
+{% endblock title%}
+
+{% block content %}
+    <p id='error'></p>
+    <form id='url_short' method='post'>
+        <label for='orignal'>Original Link</label>
+        <div>
+            <small>please include http:// or https://</small>
+        </div>
+        <input type='text' id='original' name='original' placeholder='http://google.com'>
+        <br> 
+        <br> 
+        <label for='alias' id='alias_label'> Alias Link </label>
+        <div id='alias_div'>
+            <small>Help Text: Only enter URI 2~5 words long without the slash e.g "my short link"</small>
+        </div>
+        <input type='text' id='alias' name='alias' placeholder='my short link'>
+        </br>
+        <label for='alias'> Auto Generate </label>
+        <input type='checkbox' id='auto_generate' name='auto_generate'> 
+        <br>
+        <br>
+        <button type='submit'>Submit</button>
+    </form>
+    <a href='#' id='success'></a>
+{% endblock content %}
+
+{% block js %}
+    {% load static %}
+    <script src="{%  static 'js/short/index.js' %}" defer> </script>
+
+{% endblock js %}
