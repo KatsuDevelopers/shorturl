@@ -18,4 +18,6 @@ Create your own shortened URL or have one Automatically Generated
 |                |`/api/sites-visit-today`       |List Sites Been Used Today|
 |                |`/api/top-three-visit`         |List Top Three Sites Used|
 
+## Web
 
+Form is available through the web at /create or on the nav Bar as well as a few other different links
